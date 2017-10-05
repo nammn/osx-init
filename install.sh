@@ -37,10 +37,18 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 #Change minimize/maximize window effect to scaling?
 defaults write com.apple.dock mineffect -string 'scale'
+#textselection in quicklook
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
+#safari full address bar
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+#safari debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 killall Dock 2>/dev/null;
 killall Finder 2>/dev/null;
+killall Safari 2>/dev/null;
 
 echo "getting/installing newest xcode and softwareupdates"
 # install Xcode Command Line Tools
@@ -52,8 +60,6 @@ brew install \
   brew-cask-completion \
   fish \
   neovim \
-  go \
-  gradle \
   hub \
   zplug \
   zsh \
