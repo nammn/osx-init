@@ -35,7 +35,8 @@ sudo chflags nohidden /usr
 defaults write com.apple.dock show-process-indicators -bool true
 #Display full path as window title?
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
+#Change minimize/maximize window effect to scaling?
+defaults write com.apple.dock mineffect -string 'scale'
 
 
 killall Dock 2>/dev/null;
