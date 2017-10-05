@@ -58,7 +58,7 @@ brew install \
   zplug \
   zsh \
   boost \
-  cf-cli \
+  cloudfoundry/tap/cf-cli \
   cmake	\
   git \
   node \
