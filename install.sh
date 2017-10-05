@@ -85,4 +85,5 @@ brew cask install \
   visual-studio-code \
   the-unarchiver \
   flycut \
+  franz \
 ;
