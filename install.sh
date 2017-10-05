@@ -78,6 +78,8 @@ brew install \
 ;
 
 echo "getting the rc configs from icloud and setting them in mackup, be sure to backup them before in icloud"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 wget https://raw.githubusercontent.com/nammn/dotfiles/master/.mackup.cfg -P ~/
 mackup restore
 
