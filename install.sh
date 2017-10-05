@@ -4,6 +4,7 @@ printf "Some customizations require root priveledges. Please enter your password
 sudo -v
 printf "Thanks.\n\n"
 
+printf "setting some initial settings \n"
 
 defaults write com.apple.finder AppleShowAllFiles YES; # show hidden files
 defaults write com.apple.dock tilesize -int 36; # smaller icon sizes in Dock
@@ -46,6 +47,8 @@ defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 #safari debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
+printf "killing dpokc, finder and safari"
+
 killall Dock 2>/dev/null;
 killall Finder 2>/dev/null;
 killall Safari 2>/dev/null;
@@ -55,6 +58,7 @@ echo "getting/installing newest xcode and softwareupdates"
 xcode-select --install
 softwareupdate --install -a
 
+printf "installing brew and cask stuff"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
 brew install \
   brew-cask-completion \
