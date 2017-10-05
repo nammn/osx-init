@@ -77,8 +77,8 @@ brew install \
   mackup \
 ;
 
-echo "getting the rc configs from icloud and setting them in mackup"
-wget https://github.com/nammn/dotfiles/blob/master/.mackup.cfg -P ~/
+echo "getting the rc configs from icloud and setting them in mackup, be sure to backup them before in icloud"
+wget https://raw.githubusercontent.com/nammn/dotfiles/master/.mackup.cfg -P ~/
 mackup restore
 
 brew tap caskroom/versions;
