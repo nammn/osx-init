@@ -42,12 +42,6 @@ defaults write com.apple.dock mineffect -string 'scale'
 killall Dock 2>/dev/null;
 killall Finder 2>/dev/null;
 
-echo "Setting up ~/.vimrc...";
-touch ~/.vimrc;
-echo "get number" >> ~/.vimrc;
-echo "" >> ~/.vimrc;
-echo "highlight OverLength ctermbg=red ctermfg=white guibg=#592929" >> ~/.vimrc;
-echo "match OverLength /\\%81v.\\+/" >> ~/.vimrc;
 
 # install Xcode Command Line Tools
 # https://github.com/timsutton/osx-vm-templates/blob/ce8df8a7468faa7c5312444ece1b977c1b2f77a4/scripts/xcode-cli-tools.sh
@@ -77,7 +71,12 @@ brew install \
   node \
   openssl \
   python \
+  mackup \
 ;
+
+echo "getting the rc configs from icloud and setting them in mackup"
+wget https://github.com/nammn/dotfiles/blob/master/.mackup.cfg -P ~/
+mackup restore
 
 brew tap caskroom/versions;
 brew cask install \
