@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+printf "Some customizations require root priveledges. Please enter your password.\n"
+sudo -v
+printf "Thanks.\n\n"
+
+
 defaults write com.apple.finder AppleShowAllFiles YES; # show hidden files
 defaults write com.apple.dock tilesize -int 36; # smaller icon sizes in Dock
 defaults write com.apple.dock autohide -bool true; # turn Dock auto-hidng on
