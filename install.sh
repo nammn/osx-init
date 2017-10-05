@@ -47,7 +47,10 @@ defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 #safari debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
-printf "killing dpokc, finder and safari"
+#terminal utf8
+defaults write com.apple.terminal StringEncodings -array 4
+
+printf "killing dock, finder and safari"
 
 killall Dock 2>/dev/null;
 killall Finder 2>/dev/null;
