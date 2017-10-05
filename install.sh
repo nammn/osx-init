@@ -82,14 +82,14 @@ brew cask install \
   lastpass \
   google-chrome \
   spotify \
-  webstorm \
-  intellij-idea \
   iterm2 \
-  mactex \
   spectacle \
   suspicious-package \
   visual-studio-code \
   the-unarchiver \
   flycut \
   franz \
+  webstorm \
+  intellij-idea \
+  mactex \
 ;
