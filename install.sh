@@ -42,9 +42,10 @@ defaults write com.apple.dock mineffect -string 'scale'
 killall Dock 2>/dev/null;
 killall Finder 2>/dev/null;
 
-
+echo "getting/installing newest xcode and softwareupdates"
 # install Xcode Command Line Tools
 xcode-select --install
+softwareupdate --install -a
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
 brew install \
